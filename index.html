@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock's Diamond Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock's Diamond Generator</h1>
+        
+        <div class="generator-container">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="size">Diamond Size:</label>
+                    <input type="range" id="size" min="3" max="20" value="9" step="2">
+                    <span id="size-value">9</span>
+                </div>
+
+                <div class="control-group">
+                    <label for="color">Diamond Color:</label>
+                    <input type="color" id="color" value="#00ccff">
+                </div>
+
+                <div class="control-group">
+                    <label for="bgcolor">Background Color:</label>
+                    <input type="color" id="bgcolor" value="#000000">
+                </div>
+
+                <div class="control-group">
+                    <label for="pattern">Pattern:</label>
+                    <select id="pattern">
+                        <option value="solid">Solid</option>
+                        <option value="hollow">Hollow</option>
+                        <option value="checkered">Checkered</option>
+                        <option value="random">Random</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="rotation">Rotation (degrees):</label>
+                    <input type="range" id="rotation" min="0" max="359" value="0">
+                    <span id="rotation-value">0°</span>
+                </div>
+
+                <div class="control-group">
+                    <label for="sparkle">Add Sparkle Effect:</label>
+                    <input type="checkbox" id="sparkle">
+                </div>
+
+                <button id="generate-btn">Generate Diamond</button>
+                <button id="download-btn" disabled>Download Image</button>
+            </div>
+            
+            <div class="preview">
+                <div class="loading-spinner" id="loading-spinner" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
+                <canvas id="diamond-canvas" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Created with ♦ by Rock's Diamond Generator</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
